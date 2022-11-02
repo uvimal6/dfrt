@@ -1,0 +1,39 @@
+var d = new Date();
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var month = ["January", "February", "March","April", "May", "June", "July","August", "September", "October",
+            "November", "December"];
+var tem="22/02/2022"
+const arr=tem.split("/");
+switch(arr[1]){
+case "01": arr[1]="January ";
+			break;
+case "02": arr[1]="February "; 
+			break;
+case "03": arr[1]="March ";
+			break;
+case "04": arr[1]="April ";
+			break;
+case "05": arr[1]="May ";
+			break;
+case "06": arr[1]="June ";
+			break;
+case "07": arr[1]="July ";
+			break;
+case "08": arr[1]="August ";
+			break;
+case "09": arr[1]="September ";
+			break;
+case "10": arr[1]="October ";
+			break;
+case "11": arr[1]="November ";
+			break;
+case "12": arr[1]="December ";
+			break;
+default:break;
+
+}
+var app=arr[1]+arr[0]+" "+arr[2];
+var fd=new Date(app);
+document.getElementById("demo").innerHTML = fd;
+fd.setDate(fd.getDate() - 1);
+document.getElementById("demos").innerHTML = fd;
